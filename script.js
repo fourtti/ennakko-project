@@ -8,6 +8,7 @@ document.getElementById("searchButton").addEventListener("click", async () => {
   if (name) url += "name=" + name;
   if (businessId) url += "&businessId=" + businessId;
 
+  //fetch ja response json muotoon
   let response;
   let data;
   try {
@@ -18,10 +19,13 @@ document.getElementById("searchButton").addEventListener("click", async () => {
     return;
   }
 
+
+  let noResults = document.getElementById("noResults");
   if (data.companies.length === 0) {
-    const noResults = document.getElementById("noResults");
     noResults.innerHTML = "Ei tuloksia";
     return;
+  } else {
+    noResults.innerHTML = "";
   }
   // aiksemmat table entryt
   const results = document.getElementById("results");
