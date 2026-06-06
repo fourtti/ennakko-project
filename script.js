@@ -18,8 +18,13 @@ document.getElementById("searchButton").addEventListener("click", async () => {
     console.error("Haku epäonnistui:", error);
     return;
   }
+  // aiksemmat table entryt
+  const results = document.getElementById("results");
+  // tyhjenna vanhat table entryt
+  results.innerHTML = "";
 
 
+  // ei tuloksia
   let noResults = document.getElementById("noResults");
   if (data.companies.length === 0) {
     noResults.innerHTML = "Ei tuloksia";
@@ -27,11 +32,6 @@ document.getElementById("searchButton").addEventListener("click", async () => {
   } else {
     noResults.innerHTML = "";
   }
-  // aiksemmat table entryt
-  const results = document.getElementById("results");
-
-  // tyhjenna vanhat table entryt
-  results.innerHTML = "";
 
   for (const company of data.companies) {
     const companyName = company.names[0].name;
