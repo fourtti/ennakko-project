@@ -1,26 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yrityshaku</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<div class="haku">
-    <h1>Yrityshaku</h1>
+    <div class="haku">
+        <h1>Yrityshaku</h1>
 
-    <input id="name" placeholder="Yrityksen nimi" />
-    <input id="businessId" placeholder="Y-tunnus" />
-    <button id="searchButton">Hae</button>
-</div>
+        <input id="name" placeholder="Yrityksen nimi" />
+        <input id="businessId" placeholder="Y-tunnus" />
+        <button id="searchButton">Hae</button>
+    </div>
 
 
-<table>
-  <thead>
-    <tr><th>Nimi</th><th>Y-tunnus</th><th>Osoite</th></tr>
-  </thead>
-  <tbody id="results"></tbody>
-</table>
+    <table>
+        <thead>
+            <tr>
+                <th>Nimi</th>
+                <th>Y-tunnus</th>
+                <th>Osoite</th>
+            </tr>
+        </thead>
+        <tbody id="results"></tbody>
+    </table>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
